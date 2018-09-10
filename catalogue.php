@@ -9,7 +9,7 @@
 <div class="container">
   <!--MENU-->
   <header>
-    <p class="menu"> <a href="index.html">Accueil</a> <a href="catalogue.html" class="current-page">Nos forfaits</a> </p>
+    <p class="menu"> <a href="index.html">Accueil</a> <a href="catalogue.php" class="current-page">Nos forfaits</a> </p>
   </header>
   <!--FILTRE-->
   <!--Catégorie-->
