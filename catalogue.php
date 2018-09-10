@@ -9,7 +9,7 @@
 <div class="container">
   <!--MENU-->
   <header>
-    <p class="menu"> <a href="index.html">Accueil</a> <a href="catalogue.php" class="current-page">Nos forfaits</a> </p>
+    <p class="menu"> <a href="index.php">Accueil</a> <a href="catalogue.php" class="current-page">Nos forfaits</a> </p>
   </header>
   <!--FILTRE-->
   <!--Catégorie-->
@@ -46,7 +46,7 @@ function forfaitList(){
 	// parcour de tableau des forfaits existant dans le fichier forfaits.js
     for(var j = 0; j < forfaits_data.length; j++){
 	//collecter les infos de chaque forfaits (sous forme HTML)
-        printForfait += "<div class='item "+forfaits_data[j]['categorie']+"'><img class='img-responsive' src="+forfaits_data[j]['img_catalogue']+"'images/forfaits/' alt='"+forfaits_data[j]['nom']+"' /><h3>"+forfaits_data[j]['nom']+"</h3><div class='prix'>"+forfaits_data[j]['prix']+" £</div><a class='fancybox link' href='#inline"+forfaits_data[j]['id']+"'>test</a></div><div id='inline"+forfaits_data[j]['id']+"' style='max-width:750px;display: none;'><h3>"+forfaits_data[j]['nom']+"</h3><div class='prix'>"+forfaits_data[j]['prix']+" £</div><div class='contenu'>"+forfaits_data[j]['duree']+" jours de "+forfaits_data[j]['debut_saison']+" à "+forfaits_data[j]['fin_saison']+"<br>"+forfaits_data[j]['lieu']+"<br>"+forfaits_data[j]['infos']+"<br>"+forfaits_data[j]['hebergement']+"<br>"+forfaits_data[j]['niveau']+"<br></div><a class='btn-reserver' href="+forfaits_data[j]['id']+"'reservation.html?id='>Reserver</a></div>";
+        printForfait += "<div class='item "+forfaits_data[j]['categorie']+"'><img class='img-responsive' src="+forfaits_data[j]['img_catalogue']+"'images/forfaits/' alt='"+forfaits_data[j]['nom']+"' /><h3>"+forfaits_data[j]['nom']+"</h3><div class='prix'>"+forfaits_data[j]['prix']+" £</div><a class='fancybox link' href='#inline"+forfaits_data[j]['id']+"'>test</a></div><div id='inline"+forfaits_data[j]['id']+"' style='max-width:750px;display: none;'><h3>"+forfaits_data[j]['nom']+"</h3><div class='prix'>"+forfaits_data[j]['prix']+" £</div><div class='contenu'>"+forfaits_data[j]['duree']+" jours de "+forfaits_data[j]['debut_saison']+" à "+forfaits_data[j]['fin_saison']+"<br>"+forfaits_data[j]['lieu']+"<br>"+forfaits_data[j]['infos']+"<br>"+forfaits_data[j]['hebergement']+"<br>"+forfaits_data[j]['niveau']+"<br></div><a class='btn-reserver' href="+forfaits_data[j]['id']+"'reservation.php?id='>Reserver</a></div>";
 
 
     }

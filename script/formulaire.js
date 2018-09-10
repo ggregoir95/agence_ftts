@@ -206,7 +206,7 @@ $(function(ready){
         if (result) {
 
           $("#submitme").fancybox ({
-            content : "<h3 style='text-align:center; margin-bottom: 10px;'>CONFIRMATION</h3><div style='width:500px; border: 1px solid black;'><div style='margin: 10px;'>- "+peopleNumber+" forfaits '"+offre_correspondant.nom+"'.</div><div style='margin: 10px;'>- Début séjour le"+startDate+ "</div><div style='margin: 10px;'>- Prix total: <b>"+prixTotal+"€ </b></div></div><div><a style='margin-top:10px;'class='btn-reserver' href='index.html'>Confirmer</a></div>"
+            content : "<h3 style='text-align:center; margin-bottom: 10px;'>CONFIRMATION</h3><div style='width:500px; border: 1px solid black;'><div style='margin: 10px;'>- "+peopleNumber+" forfaits '"+offre_correspondant.nom+"'.</div><div style='margin: 10px;'>- Début séjour le"+startDate+ "</div><div style='margin: 10px;'>- Prix total: <b>"+prixTotal+"€ </b></div></div><div><a style='margin-top:10px;'class='btn-reserver' href='index.php'>Confirmer</a></div>"
           });
           document.getElementById('submitme').click();
 
