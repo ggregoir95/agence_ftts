@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,7 @@
     <h3 id="nom-forfait" class="nom-forfait">
     <h3>
     De <span id="debut-saison" class="debut-saison"></span> à <span id="fin-saison" class="fin-saison"></span>
-    <form id="myForm">
+    <form id="myForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       <label class="form_col" for="lastName">Nom :</label>
       <input name="lastName" id="lastName" type="text" placeholder=""/>
       <span class="tooltip">Un nom ne peut pas faire moins de 2 caractères</span> <br />
