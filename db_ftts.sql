@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `db_ftts` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `db_ftts`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: db_ftts
@@ -121,4 +123,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-11 16:29:53
+-- Dump completed on 2018-09-12  8:29:27
