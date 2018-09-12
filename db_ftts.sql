@@ -24,7 +24,7 @@ USE `db_ftts`;
 DROP TABLE IF EXISTS `categorie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `categorie` (
+CREATE TABLE `categorie` (categorieid
   `idCategorie` int(11) NOT NULL,
   `nomCategorie` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idCategorie`)
