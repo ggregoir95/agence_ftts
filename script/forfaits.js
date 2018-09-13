@@ -289,5 +289,88 @@ var forfaits_data = [
         photo3: "rando_pyramides_mayas_3.jpg",
         photo_alt:"photo randonnée pyramides Mayas",
         photo_cat: "categorie/iceberg_02.jpg"
+    },
+
+    {
+        id: "13",
+        nom: "Lac Rose (Sénégal)",
+        ref_forfait: "Le Lac est vraiment rose",
+        info_cat: "Jadis cœur de la civilisation maya à son apogée, le Guatemala est le pays le plus indien d’Amérique Centrale. Cités coloniales et villages indigènes parsèment...",
+        categorie: 3, // Randonnée et sac à dos
+        lieu: "<ul><li>L'eau est particulièrement salée : 380 grammes par litre. Le sel est exploité depuis les années 1970. Les hommes, dans l'eau jusqu'à la poitrine, cassent avec un piquet le sel déposé sur le fond avant de le ramasser à la pelle pour remplir des pirogues d'une capacité d'une tonne  Les femmes sont chargées de débarquer les pirogues et d'entasser le sel sur les bords pour le sécher et le blanchir au soleil. Tous s'enduisent le corps de beurre de karité pour se protéger de la salinité corrosive. </li></ul>",
+        infos : "<ul><li>Consulat Sénégal </li><li>205, Sangalkam - 200 Dakar - Tél. : 33 820 54 22 </li><li><a href='http://www.consulat.com'>http://www.consulat.com</a></li></ul>",
+        hebergement : "<ul><li>12 nuits à l'hôtel ou auberge. Sac de couchage inutile. </li><br/><li>Restauration </li><li>En général, pique-nique le midi et repas chauds le soir. </li><li>Les repas au restaurant Thiof BI J12 et J13 ne sont pas compris (environ 3 repas, prévoir de l'ordre de 10 USD par repas).</li></ul>",
+        niveau : "<ul><li>Intensité physique : ** </li><br/><li>Les randonnées et ascensions de volcans sont accessibles à toute personne en bonne condition physique capable de marcher 3 à 7h par jour sur des sentiers généralement sans difficulté technique, avec un sac à dos léger. </li><li>Les affaires personnelles, le matériel collectif et le ravitaillement sont transportés en véhicule ou en bateau. Vous porterez donc seulement dans un petit sac à dos le nécessaire de la journée (repas de midi, pull, vêtement imperméable, appareil photo, soit 4 ou 5 kg). Vous serez durant tout votre séjour à une altitude de plus de 1500 m (altitude maxima = 3800 m). </li><li>Au cours de ce voyage, nous parcourrons environ 1.000 km sur les routes senealaises, à une vitesse moyenne de 50 km/h.</li></ul>",
+        duree: 15,
+        debut_saison: "01-01-2018",
+        fin_saison: "31-12-2018",
+        prix: 680,
+        places_dispo: 8,
+        max_animaux: 0,
+        prix_animal: 0,
+        img_catalogue: "lac_rose.jpg",
+        photo1: "lac_rose.jpg",
+        photo2: "lac_rose.jpg",
+        photo3: "lac_rose.jpg",
+        photo_alt:"photo lac_rose",
+        photo_cat: "categorie/lac_rose.jpg"
+    },
+
+
+
+    {
+        id: "14",
+        nom: "Punta Cana (République Dominicaine)",
+        ref_forfait: "Punta Cana est une ville de République dominicaine située dans la province de La Altagracia",
+        info_cat: "En 1970, un groupe d'investisseurs américains a acheté plus de 5 800 hectares, soit 58 km2, dans la partie extrême-est du pays. Cette superficie se répartit en 10 km2 de plages et zones côtières et 48 km2 de jungles. Bien que les eaux turquoise s'y prêtent la station balnéaire se situe côté atlantique et non du côté caraïbes",
+        categorie: 3, // Randonnée et sac à dos
+        lieu: "<ul><li>Cette région comprend deux parcs nationaux, la célèbre région de Punta Cana et l'île Saona. Dans les alentours se sont aussi installés de nombreuses attractions touristiques. Pour les attractions plus connue le Manati Park (en français le « parc lamantin »).  </li></ul>",
+        infos : "<ul><li>Ambassade RD </li><li>205, La Altagracia\n - 200 Punta - Tél. : 544 21 54 22 </li><li><a href='http://www.ambassadeRD.com'>http://www.ambassadeRD.com</a></li></ul>",
+        hebergement : "<ul><li>12 nuits à l'hôtel ou auberge. Sac de couchage inutile. </li><br/><li>Restauration </li><li>En général, pique-nique le midi et repas chauds le soir. </li><li>Les repas au restaurant Punta Cana BI J12 et J13 ne sont pas compris (environ 3 repas, prévoir de l'ordre de 10 USD par repas).</li></ul>",
+        niveau : "<ul><li>Intensité physique : ** </li><br/><li>Les randonnées et ascensions de volcans sont accessibles à toute personne en bonne condition physique capable de marcher 3 à 7h par jour sur des sentiers généralement sans difficulté technique, avec un sac à dos léger. </li><li>Les affaires personnelles, le matériel collectif et le ravitaillement sont transportés en véhicule ou en bateau. Vous porterez donc seulement dans un petit sac à dos le nécessaire de la journée (repas de midi, pull, vêtement imperméable, appareil photo, soit 4 ou 5 kg). Vous serez durant tout votre séjour à une altitude de plus de 1500 m (altitude maxima = 3800 m). </li><li>Au cours de ce voyage, nous parcourrons environ 1.000 km sur les routes senealaises, à une vitesse moyenne de 50 km/h.</li></ul>",
+        duree: 15,
+        debut_saison: "01-01-2018",
+        fin_saison: "31-12-2018",
+        prix: 680,
+        places_dispo: 8,
+        max_animaux: 0,
+        prix_animal: 0,
+        img_catalogue: "punta_cana.jpg",
+        photo1: "punta_cana.jpg",
+        photo2: "punta_cana.jpg",
+        photo3: "punta_cana.jpg",
+        photo_alt:"photo punta_cana",
+        photo_cat: "categorie/punta_cana.jpg"
+    },
+
+
+
+
+
+
+    {
+        id: "15",
+        nom: "Burj Al Arabe (Dubaï)",
+        ref_forfait: "Burj Al Arabe très grand hotel",
+        info_cat: "À l’origine, le gratte-ciel devait s’appeler « Burj Dubaï ». À l’instar du projet de complexe immobilier éponyme, il a été rebaptisé Burj Khalifa lors de son inauguration le 4 janvier 2010 en l’honneur de l’émir d’Abu Dhabi, le Cheikh Khalifa ben Zayed Al Nahyane.",
+        categorie: 3, // Randonnée et sac à dos
+        lieu: "<ul><li>Burj Khalifa fait partie d’un vaste projet urbanistique, immobilier et architectural couvrant une superficie de 2 km2. Il s’agit de créer un nouveau quartier, Downtown Burj Khalifa, un peu au sud du centre historique de Dubaï, et à côté du quartier côtier de Jumeirah (en), mais situé quelques kilomètres à l’intérieur des terres. </li></ul>",
+        infos : "<ul><li>Ambassade Dubai </li><li>125, Boteler Street -Ottawa, ON K1N 0A- Tél. : (+1) (613) 565-7272 </li><li><a href='http://www.embassypages.com'>http://www.embassypages.com</a></li></ul>",
+        hebergement : "<ul><li>12 nuits à l'hôtel ou auberge. Sac de couchage inutile. </li><br/><li>Restauration </li><li>En général, pique-nique le midi et repas chauds le soir. </li><li>Les repas au restaurant Thiof BI J12 et J13 ne sont pas compris (environ 3 repas, prévoir de l'ordre de 10 USD par repas).</li></ul>",
+        niveau : "<ul><li>Intensité physique : ** </li><br/><li>Les randonnées et ascensions de volcans sont accessibles à toute personne en bonne condition physique capable de marcher 3 à 7h par jour sur des sentiers généralement sans difficulté technique, avec un sac à dos léger. </li><li>Les affaires personnelles, le matériel collectif et le ravitaillement sont transportés en véhicule ou en bateau. Vous porterez donc seulement dans un petit sac à dos le nécessaire de la journée (repas de midi, pull, vêtement imperméable, appareil photo, soit 4 ou 5 kg). Vous serez durant tout votre séjour à une altitude de plus de 1500 m (altitude maxima = 3800 m). </li><li>Au cours de ce voyage, nous parcourrons environ 1.000 km sur les routes senealaises, à une vitesse moyenne de 50 km/h.</li></ul>",
+        duree: 15,
+        debut_saison: "01-01-2018",
+        fin_saison: "31-12-2018",
+        prix: 680,
+        places_dispo: 8,
+        max_animaux: 0,
+        prix_animal: 0,
+        img_catalogue: "lac_rose.jpg",
+        photo1: "burj.jpg",
+        photo2: "burj.jpg",
+        photo3: "burj.jpg",
+        photo_alt:"photo burj",
+        photo_cat: "categorie/burj.jpg"
     }
+
 ];
