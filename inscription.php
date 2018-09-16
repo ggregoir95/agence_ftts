@@ -11,11 +11,12 @@ require('requetes.php');
 $insertUser = "INSERT INTO user (fname, lname, email, pword)
 VALUES (?,?,?,?)";
 
-if(isset($_POST)) {
-    $firstname = $_POST['firstName'];
-    $lastname = $_POST['lastName'];
-    $email = $_POST['email'];
-    $pwd = $_POST['password'];
+if(isset($_POST)){
+    $firstname = $_POST['firstName'] = test_input($_POST["firstName"]);
+    $lastname = $_POST['lastName']  = test_input($_POST["lastName"]);
+    $email = $_POST['email']  = test_input($_POST["email"]);
+    $pwd = $_POST['password']  = test_input($_POST["password"]);
+
 
 
     $stmt = $conn->prepare($insertUser);
@@ -24,6 +25,17 @@ if(isset($_POST)) {
     $stmt->execute();
 
     $stmt->close();
+
+
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+
 
     header('Location: catalogue.php');
 }
