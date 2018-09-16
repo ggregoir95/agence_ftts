@@ -63,7 +63,6 @@ $destinations = mysqli_query($conn, $selectDestinations);
         }
 document.getElementById('ourHolder').innerHTML = forfaitList();//afficher l'element ayant l'ID ourHolder
 /*-------------------------------------------------------------------------------------------------------------*/
-
 /*------------------------------------------------------------------------------------------------------------*/
 	
 	//Fonction de Filtre
