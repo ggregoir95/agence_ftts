@@ -47,7 +47,11 @@
                     if($_GET['login'] == 1) {
                         require_once('connexion.php');
                     }
-                } ?>
+                }
+
+                if(isset($_GET['inscription'])) {
+                    require_once('inscription.php');
+                }?>
         </div>
     <script type="text/javascript">
         function redirCpt() {

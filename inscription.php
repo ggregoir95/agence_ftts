@@ -16,15 +16,17 @@ if(isset($_POST)) {
     $lastname = $_POST['lastName'];
     $email = $_POST['email'];
     $pwd = $_POST['password'];
+
+
+    $stmt = $conn->prepare($insertUser);
+    $stmt->bind_param("ssss", $firstname, $lastname, $email, $pwd);
+
+    $stmt->execute();
+
+    $stmt->close();
+
+    header('Location: catalogue.php');
 }
-
-$stmt = $conn->prepare($insertUser);
-$stmt->bind_param("ssss", $firstname, $lastname, $email, $pwd);
-
-$stmt->execute();
-
-$stmt->close();
-
 ?>
 
     <div class="page-content">
