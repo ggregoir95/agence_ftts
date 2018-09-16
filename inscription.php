@@ -21,7 +21,7 @@ if(isset($_POST)){
 
     $stmt = $conn->prepare($insertUser);
     $stmt->bind_param("ssss", $firstname, $lastname, $email, $pwd);
-
+    echo "statement";
     $stmt->execute();
 
     $stmt->close();
@@ -37,6 +37,7 @@ if(isset($_POST)){
 
 
 
+    $_SESSION['contd'] = 'oui';
     header('Location: catalogue.php');
 }
 ?>

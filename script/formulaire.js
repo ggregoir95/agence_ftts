@@ -14,6 +14,7 @@ var startDate;
 var prixTotal;
 if(offre_correspondant) {
   $('#nom-forfait').html(offre_correspondant.nom);
+  $('#nomForf').setAttribute('value', offre_correspondant.nom);
   $('#debut-saison').html(offre_correspondant.debut_saison);
   $('#fin-saison').html(offre_correspondant.fin_saison);
 }

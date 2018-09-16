@@ -1,6 +1,5 @@
 "use strict";
 
-var categories = ["Destination Surf", "Espaces sous-marins", "Snow attitude", "Randonnée et sac à dos"];
 var forfaits_data = [
     {
         id: "1",

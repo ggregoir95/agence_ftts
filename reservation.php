@@ -10,6 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = test_input($_POST["date"]);
     $adress = test_input($_POST["adress"]);
 
+
+    $_SESSION['nbRes']++;
+    array_push($_SESSION['tableReservations'], $_POST['nomForf']);
 }
 
 function test_input($data)
@@ -40,11 +43,11 @@ function test_input($data)
     </header>
     <div class="page-content">
         <h2>Formulaire de réservation</h2>
-        <h3 id="nom-forfait" class="nom-forfait">
-            <h3>
+        <h3 id="nom-forfait" class="nom-forfait"></h3>
                 De <span id="debut-saison" class="debut-saison"></span> à <span id="fin-saison"
                                                                                 class="fin-saison"></span>
-                <form id="myForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <form id="myForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <input type="hidden" id="nomForf" name="nomForf" />
                     <label class="form_col" for="lastName">Nom :</label>
                     <input name="lastName" id="lastName" type="text" placeholder=""/>
                     <span class="tooltip">Un nom ne peut pas faire moins de 2 caractères</span> <br/>

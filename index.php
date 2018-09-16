@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$_SESSION['tableReservations'] = array();
 ?>
 <!DOCTYPE html>
 
@@ -46,11 +47,13 @@
             <?php if(isset($_GET['login'])) {
                     if($_GET['login'] == 1) {
                         require_once('connexion.php');
+                        $_SESSION['nbRes'] = 0;
                     }
                 }
 
                 if(isset($_GET['inscription'])) {
                     require_once('inscription.php');
+                    $_SESSION['nbRes'] = 0;
                 }?>
         </div>
     <script type="text/javascript">

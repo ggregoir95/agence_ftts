@@ -8,7 +8,7 @@
 require('requetes.php');
 
 
-if(isset($_POST)) {
+if(isset($_POST['courriel'])) {
     $users = mysqli_query($conn, $selectUsers);
     $uname = $_POST['courriel'];
     $passw = md5($_POST['pwd']);
@@ -18,6 +18,7 @@ if(isset($_POST)) {
             if($row['pword'] == $passw) {
                 header("Location: catalogue.php");
                 $_SESSION['contd'] = "oui";
+                $_SESSION['nomC'] = $row['fname'] . " " . $row['lname'];
             }
             else {
                 alert("Mot de Passe Incorrect");
