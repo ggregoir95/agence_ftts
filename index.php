@@ -41,15 +41,20 @@
 					<a href="<?php echo $_SERVER['PHP_SELF'], '?inscription=1' ?>">Inscription</a>
 					
 				</p>
-               
             </header>
+
+            <?php if(isset($_GET['login'])) {
+                    if($_GET['login'] == 1) {
+                        require_once('connexion.php');
+                    }
+            }?>
         </div>
     <script type="text/javascript">
         function redirCpt() {
             <?php if(isset($_SESSION['contd'])) {?>
                 location.href = "account.php";
             <?php } else {?>
-                location.href = "";
+                location.href = "<?php echo $_SERVER['PHP_SELF'], '?login=1' ?>";
             <?php }?>
         }
     </script>
