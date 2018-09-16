@@ -1,22 +1,30 @@
+<?php
+require('requetes.php');
+
+$categories = mysqli_query($conn, $selectCategs);
+$destinations = mysqli_query($conn, $selectDestinations);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Agence Fly to the sky</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Agence Fly to the sky</title>
 </head>
 <body id="page" class="interne">
 <div class="container">
-  <!--MENU-->
-  <header>
-    <p class="menu"> <a href="index.php">Accueil</a> <a href="catalogue.php" class="current-page">Nos forfaits</a> </p>
-  </header>
-  <!--FILTRE-->
-  <!--Catégorie-->
-  <ul id="filterOptions">
-  </ul>
-  <!--Forfaits-->
-  <div id="ourHolder"> </div>
+    <!--MENU-->
+    <header>
+        <p class="menu"> <a href="index.php">Accueil</a> <a href="catalogue.php" class="current-page">Nos forfaits</a> </p>
+    </header>
+    <!--FILTRE-->
+    <!--Catégorie-->
+    <ul id="filterOptions">
+    </ul>
+    <!--Forfaits-->
+    <div id="ourHolder"> </div>
 </div>
 <link rel="stylesheet" type="text/css" href="style/global.css" />
 <script type="text/javascript" src="script/forfaits.js"></script>
@@ -26,32 +34,33 @@
 <link rel="stylesheet" type="text/css" href="script/jquery.fancybox.css" media="screen" />
 <script type="text/javascript">
 
-$(document).ready(function() {
-	//liste des catégories
-	function categList(){
-    var printCateg = "";
-	// parcour de tableau des catégorie existant dans le fichier forfaits.js
-    for(var i = 0; i < categories.length; i++){ 
-	//concatiner les catégories (sous forme HTML)
-        printCateg += "<li><a href='#' class='"+[i]+"'>"+categories[i]+"</li></a>";  
-    }
-    return printCateg; // <-- à afficher
-}
-document.getElementById('filterOptions').innerHTML = categList(); //afficher l'element ayant l'ID filterOptions
+    $(document).ready(function() {
+        //liste des catégories
+        function categList(){
+            var printCateg = "";
+            <?php if (mysqli_num_rows($categories) > 0) {
+            $i = 0;
+            while($row = mysqli_fetch_assoc($categories)) {?>
+            //concatiner les catégories (sous forme HTML)
+            printCateg += "<li><a href='#' class='<?=$i;?>'><?=$row['nomCategorie'];?></li></a>";
+            <?php $i++;
+            }}?>
+            return printCateg; // <-- à afficher
+        }
+        document.getElementById('filterOptions').innerHTML = categList(); //afficher l'element ayant l'ID filterOptions
 
 //liste des forfaits
-function forfaitList(){   
-
-    var printForfait = "";
-	// parcour de tableau des forfaits existant dans le fichier forfaits.js
-    for(var j = 0; j < forfaits_data.length; j++){
-	//collecter les infos de chaque forfaits (sous forme HTML)
-        printForfait += "<div class='item "+forfaits_data[j]['categorie']+"'><img class='img-responsive' src="+forfaits_data[j]['img_catalogue']+"'images/forfaits/' alt='"+forfaits_data[j]['nom']+"' /><h3>"+forfaits_data[j]['nom']+"</h3><div class='prix'>"+forfaits_data[j]['prix']+" £</div><a class='fancybox link' href='#inline"+forfaits_data[j]['id']+"'>test</a></div><div id='inline"+forfaits_data[j]['id']+"' style='max-width:750px;display: none;'><h3>"+forfaits_data[j]['nom']+"</h3><div class='prix'>"+forfaits_data[j]['prix']+" £</div><div class='contenu'>"+forfaits_data[j]['duree']+" jours de "+forfaits_data[j]['debut_saison']+" à "+forfaits_data[j]['fin_saison']+"<br>"+forfaits_data[j]['lieu']+"<br>"+forfaits_data[j]['infos']+"<br>"+forfaits_data[j]['hebergement']+"<br>"+forfaits_data[j]['niveau']+"<br></div><a class='btn-reserver' href="+forfaits_data[j]['id']+"'reservation.php?id='>Reserver</a></div>";
-
-
-    }
-    return printForfait; // <-- à afficher
-}
+        function forfaitList(){
+            var printForfait = "";
+            <?php if (mysqli_num_rows($destinations) > 0) {
+            while($row2 = mysqli_fetch_assoc($destinations)) {
+            ?>
+            //collecter les infos de chaque forfaits (sous forme HTML)
+            printForfait += "<div class='item <?=$row2['idCategorie']?>'><img class='img-responsive' src='images/forfaits/<?=$row2['img_catalogue']?>' alt='<?=$row2['nom']?>' /><h3><?=$row2['nom']?></h3><div class='prix'><?=$row2['prix']?> £</div><a class='fancybox link' href='#inline<?=$row2['id']?>'>test</a></div><div id='inline<?=$row2['id']?>' style='max-width:750px;display: none;'><h3><?=$row2['nom']?></h3><div class='prix'><?=$row2['prix']?> £</div><div class='contenu'><?=$row2['duree']?> jours de <?=$row2['debut_saison']?> à <?=$row2['fin_saison']?><br><?=$row2['lieu']?><br><?=$row2['infos']?><br><?=$row2['hebergement']?><br><?=$row2['niveau']?><br></div><a class='btn-reserver' href=<?=$row2['id']?>'reservation.php?id='>Reserver</a></div>";
+            <?php }}
+            ?>
+            return printForfait; // <-- à afficher
+        }
 document.getElementById('ourHolder').innerHTML = forfaitList();//afficher l'element ayant l'ID ourHolder
 /*-------------------------------------------------------------------------------------------------------------*/
 

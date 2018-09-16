@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -31,15 +34,25 @@
         <div class="container">
          <!--MENU-->
             <header>
-               
+                <input type="button" id="compte" name="compte" value="Votre Compte" onclick="redirCpt()">
 				<p class="menu">
 					
-					<a href="#" class="current-page">Accueil</a>  
-					<a href="catalogue.php">Nos forfaits</a>
+					<a href="<?php echo $_SERVER['PHP_SELF'], '?login=1' ?>" class="current-page">Connexion</a>
+					<a href="<?php echo $_SERVER['PHP_SELF'], '?inscription=1' ?>">Inscription</a>
 					
 				</p>
                
             </header>
         </div>
+    <script type="text/javascript">
+        function redirCpt() {
+            <?php if(isset($_SESSION['contd'])) {?>
+                location.href = "account.php";
+            <?php } else {?>
+                location.href = "";
+            <?php }?>
+        }
+    </script>
     </body>
 </html>
+
