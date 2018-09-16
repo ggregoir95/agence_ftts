@@ -17,6 +17,7 @@ if(isset($_POST)) {
         if($row['email'] == $uname) {
             if($row['pword'] == $passw) {
                 header("Location: catalogue.php");
+                $_SESSION['contd'] = "oui";
             }
             else {
                 alert("Mot de Passe Incorrect");

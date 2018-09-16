@@ -47,7 +47,7 @@
                     if($_GET['login'] == 1) {
                         require_once('connexion.php');
                     }
-            }?>
+                } ?>
         </div>
     <script type="text/javascript">
         function redirCpt() {

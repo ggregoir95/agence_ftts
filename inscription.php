@@ -5,29 +5,33 @@
  * Date: 13/09/2018
  * Time: 11:00
  */
+
+require('requetes.php');
+
+$insertUser = "INSERT INTO user (fname, lname, email, pword)
+VALUES (?,?,?,?)";
+
+if(isset($_POST)) {
+    $firstname = $_POST['firstName'];
+    $lastname = $_POST['lastName'];
+    $email = $_POST['email'];
+    $pwd = $_POST['password'];
+}
+
+$stmt = $conn->prepare($insertUser);
+$stmt->bind_param("ssss", $firstname, $lastname, $email, $pwd);
+
+$stmt->execute();
+
+$stmt->close();
+
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Formulaire d' Inscription</title>
-    <link rel="stylesheet" href="style/global.css" charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="style/global.css" />
-
-</head>
-<body id="page" class="interne">
-
-<div class="container">
-    <header>
-        <p class="menu"> <a href="index.php">Accueil</a> <a href="catalogue.php" class="current-page">Nos forfaits</a></p>
-    </header>
     <div class="page-content">
         <h2>Inscription</h2>
         <h3 id="incription" class=incription>
             <h3>
-                <form id="myFormInsc" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                <form id="myFormInsc" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                     <label class="form_col" for="lastName">Nom :</label>
                     <input name="lastName" id="lastName" type="text" placeholder=""/>
                     <br />
@@ -40,19 +44,7 @@
                     <label class="form_col" for="password">Mot de passe :</label>
                     <input name="password" id="password" placeholder="" type="password" />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-
                     <input type="submit" id="submitme" value="Inscrire" />
                 </form>
     </div>
-</div>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="script/jquery.fancybox.pack.js"></script>
-<link rel="stylesheet" type="text/css" href="script/jquery.fancybox.css" media="screen" />
-<script type="text/javascript" src="script/forfaits.js"></script>
-<script type="text/javascript" src="script/formulaire.js"></script>
-</body>
-</html>
 
