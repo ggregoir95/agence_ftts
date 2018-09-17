@@ -9,7 +9,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "abc123...";
-$dbname = "db_ftts";
+$dbname = "dbftts";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
