@@ -7,8 +7,8 @@
  */
 
 $servername = "localhost";
-$username = "root";
-$password = "abc123...";
+$username = "ggregoir";
+$password = "abc123";
 $dbname = "dbftts";
 
 // Create connection
