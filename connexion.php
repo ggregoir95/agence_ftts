@@ -21,18 +21,17 @@ if(isset($_POST['courriel'])) {
                 $_SESSION['nomC'] = $row['fname'] . " " . $row['lname'];
             }
             else {
-                alert("Mot de Passe Incorrect");
-
                 function alert($msg) {
                     echo "<script type='text/javascript'>alert('$msg');</script>";
                 }
+                alert("Mot de Passe Incorrect");
             }
         } else {
-            alert("Courriel Incorrect");
 
             function alert($msg) {
                 echo "<script type='text/javascript'>alert('$msg');</script>";
             }
+            alert("Courriel Incorrect");
         }
     }
 
@@ -41,11 +40,11 @@ if(isset($_POST['courriel'])) {
 ?>
 
 <div class="connect">
-    <form method="post" action="<?= $_SERVER["PHP_SELF"]?>">
+    <form method="post" action="<?= $_SERVER["PHP_SELF"] . "?login=1"?>">
         <label for="email">Entrez votre Courriel</label><br />
         <input type="text" name="courriel" id="email"><br />
         <label for="pwd">Entrez votre mot de passe</label><br />
-        <input type="text" name="pwd" id="pwd">
+        <input type="password" name="pwd" id="pwd">
         <input type="submit" value="Connection">
     </form>
 </div>

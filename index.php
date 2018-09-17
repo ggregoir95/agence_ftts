@@ -1,6 +1,23 @@
 <?php
 session_start();
 $_SESSION['tableReservations'] = array();
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+if(isset($_POST['compte'])) {
+    if(isset($_SESSION['contd'])) {
+        header("Location: account.php");
+    }
+    else {
+        header("Location: index.php?login=1");
+    }
+}
 ?>
 <!DOCTYPE html>
 
@@ -35,7 +52,9 @@ $_SESSION['tableReservations'] = array();
         <div class="container">
          <!--MENU-->
             <header>
-                <input type="button" id="compte" name="compte" value="Votre Compte" onclick="redirCpt()">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                    <input type="submit" id="compte" name="compte" value="Votre Compte">
+                </form>
 				<p class="menu">
 					
 					<a href="<?php echo $_SERVER['PHP_SELF'], '?login=1' ?>" class="current-page">Connexion</a>
@@ -58,11 +77,7 @@ $_SESSION['tableReservations'] = array();
         </div>
     <script type="text/javascript">
         function redirCpt() {
-            <?php if(isset($_SESSION['contd'])) {?>
-                location.href = "account.php";
-            <?php } else {?>
-                location.href = "<?php echo $_SERVER['PHP_SELF'], '?login=1' ?>";
-            <?php }?>
+
         }
     </script>
     </body>

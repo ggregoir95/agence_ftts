@@ -6,11 +6,20 @@
  * Time: 14:28
  */
 
-$nomUser = $_SESSION['nomC'];
+$nomUser = "";
+
+if(isset($_SESSION['nomC'])) {
+    $nomUser = $_SESSION['nomC'];
+}
+
+$tabRes = array();
 if (isset($_SESSION['tableReservations'])) {
     $tabRes = $_SESSION['tableReservations'];
 }
 
+if(isset($_POST['cat'])) {
+    header("Location: catalogue.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,15 +43,14 @@ if (isset($_SESSION['tableReservations'])) {
             }?>
         </ul>
 
-        <input type="button" value="Retour au Catalogue" onclick="cat()">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+            <input type="submit" name="cat" value="Retour au Catalogue" onclick="cat()">
+        </form>
     </div>
 
 <script type="text/javascript">
     function ret($res) {
         <?php unset($tabRes[$res])?>
-    }
-    function cat() {
-        window.location.href = 'catalogue.php';
     }
 </script>
 </body>
