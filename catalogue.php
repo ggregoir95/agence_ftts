@@ -17,6 +17,9 @@ $destinations = mysqli_query($conn, $selectDestinations);
 <div class="container">
     <!--MENU-->
     <header>
+        <form method="post" class="compte" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+            <input type="submit" name="compte" value="Votre Compte">
+        </form>
         <p class="menu"> <a href="index.php">Accueil</a> <a href="catalogue.php" class="current-page">Nos forfaits</a> </p>
     </header>
     <!--FILTRE-->

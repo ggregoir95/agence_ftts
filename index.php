@@ -52,8 +52,8 @@ if(isset($_POST['compte'])) {
         <div class="container">
          <!--MENU-->
             <header>
-                <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                    <input type="submit" id="compte" name="compte" value="Votre Compte">
+                <form method="post" class="compte" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+                    <input type="submit" name="compte" value="Votre Compte">
                 </form>
 				<p class="menu">
 					

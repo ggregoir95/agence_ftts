@@ -19,6 +19,12 @@ if (isset($_SESSION['tableReservations'])) {
 if(isset($_POST['cat'])) {
     header("Location: catalogue.php");
 }
+
+if(isset($_POST['decon'])) {
+    session_unset();
+    session_destroy();
+    header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +52,12 @@ if(isset($_POST['cat'])) {
         </ul>
 
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
-            <input type="submit" name="cat" value="Retour au Catalogue" onclick="cat()">
+            <input type="submit" name="cat" value="Retour au Catalogue">
         </form>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+            <input type="submit" name="decon" value="Deconnexion">
+        </form>
+
     </div>
 
 <script type="text/javascript">
