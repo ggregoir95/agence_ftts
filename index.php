@@ -1,12 +1,11 @@
 <?php
 if ( session_status() === PHP_SESSION_NONE ) {
     session_start();
-    if(!isset($_SESSION['tableReservations'])) {
-        $_SESSION['tableReservations'] = array();
-    }
-
 }
 
+if(!isset($_SESSION['tableReservations'])) {
+    $_SESSION['tableReservations'] = array('tabRes');
+}
 function test_input($data)
 {
     $data = trim($data);

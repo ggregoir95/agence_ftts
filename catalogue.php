@@ -4,6 +4,14 @@ require('requetes.php');
 $categories = mysqli_query($conn, $selectCategs);
 $destinations = mysqli_query($conn, $selectDestinations);
 
+if(isset($_POST['compte'])) {
+    if(isset($_SESSION['contd'])) {
+        header("Location: account.php");
+    }
+    else {
+        header("Location: index.php?login=1");
+    }
+}
 ?>
 
 <!DOCTYPE html>
