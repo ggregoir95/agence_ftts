@@ -5,8 +5,7 @@
  * Date: 2018-09-16
  * Time: 14:28
  */
-
-$nomUser = "";
+//$nomUser = "";
 
 if(isset($_SESSION['nomC'])) {
     $nomUser = $_SESSION['nomC'];
@@ -33,6 +32,9 @@ if(isset($_POST['cat'])) {
     <link rel="stylesheet" type="text/css" href="style/global.css" /><!--style global-->
     <link rel="stylesheet" type="text/css" href="style/slide.css" /><!--style slider-->
     <script type="text/javascript" src="script/modernizr.custom.86080.js"></script><!--script slider-->
+    <style>
+        body {background-color: #a3bfed};
+    </style>
 </head>
 <body id="page"><!--bannière-->
     <div class="divProfil">

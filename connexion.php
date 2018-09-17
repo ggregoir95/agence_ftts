@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: ggregoir
@@ -16,9 +17,14 @@ if(isset($_POST['courriel'])) {
     while($row = mysqli_fetch_assoc($users)) {
         if($row['email'] == $uname) {
             if($row['pword'] == $passw) {
-                header("Location: catalogue.php");
                 $_SESSION['contd'] = "oui";
-                $_SESSION['nomC'] = $row['fname'] . " " . $row['lname'];
+                $_SESSION['nomC'] = $row['fname'] . " " .  $row['lname'];
+
+                function alert($msg) {
+                    echo "<script type='text/javascript'>alert('$msg');</script>";
+                }
+                alert($row['fname'] . " " .  $row['lname']);
+                //header("Location: catalogue.php");
             }
             else {
                 function alert($msg) {

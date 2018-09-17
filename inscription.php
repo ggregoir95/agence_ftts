@@ -5,7 +5,6 @@
  * Date: 13/09/2018
  * Time: 11:00
  */
-
 require('requetes.php');
 
 $insertUser = "INSERT INTO user (fname, lname, email, pword)

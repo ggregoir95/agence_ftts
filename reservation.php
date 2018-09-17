@@ -1,4 +1,5 @@
 <?php
+
 // define variables and set to empty values
 $firstName = $lastName = $email = $phone = $date = $adress = "";
 
@@ -10,7 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = test_input($_POST["date"]);
     $adress = test_input($_POST["adress"]);
 
+}
 
+if(isset($_POST['reserver'])) {
     $_SESSION['nbRes']++;
     array_push($_SESSION['tableReservations'], $_POST['nomForf']);
 }
@@ -46,7 +49,7 @@ function test_input($data)
         <h3 id="nom-forfait" class="nom-forfait"></h3>
                 De <span id="debut-saison" class="debut-saison"></span> à <span id="fin-saison"
                                                                                 class="fin-saison"></span>
-                <form id="myForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <form id="myForm" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                     <input type="hidden" id="nomForf" name="nomForf" />
                     <label class="form_col" for="lastName">Nom :</label>
                     <input name="lastName" id="lastName" type="text" placeholder=""/>
@@ -82,7 +85,7 @@ function test_input($data)
                         <span id="total"><b>0 €<b/></span></div>
                     <br/>
                     <span class="form_col"></span>
-                    <input type="submit" id="submitme" value="Réserver"/>
+                    <input type="submit" id="submitme" name="reserver" value="Réserver"/>
                 </form>
     </div>
 </div>
