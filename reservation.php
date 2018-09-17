@@ -1,7 +1,7 @@
 <?php
 
-// define variables and set to empty values
-$firstName = $lastName = $email = $phone = $date = $adress = "";
+
+$firstName = $lastName = $email = $phone = $date = $address = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = test_input($_POST["firstName"]);
@@ -9,13 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = test_input($_POST["email"]);
     $phone = test_input($_POST["phone"]);
     $date = test_input($_POST["date"]);
-    $adress = test_input($_POST["adress"]);
+    $address = test_input($_POST["address"]);
 
-}
-
-if(isset($_POST['reserver'])) {
-    $_SESSION['nbRes']++;
-    array_push($_SESSION['tableReservations'], $_POST['nomForf']);
 }
 
 function test_input($data)
@@ -26,6 +21,13 @@ function test_input($data)
     return $data;
 }
 
+if(isset($_POST['reserver'])) {
+// define variables and set to empty values
+
+    if(isset($_POST['reserver'])) {
+        array_push($_SESSION['tableReservations'], $_POST['nomForf']);
+    }
+}
 ?>
 
 <!DOCTYPE html>

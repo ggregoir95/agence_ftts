@@ -8,7 +8,9 @@
  */
 require('requetes.php');
 
-
+if(array_search('oui', $_SESSION['contd'])) {
+    header('Location: catalogue.php');
+}
 if(isset($_POST['courriel'])) {
     $users = mysqli_query($conn, $selectUsers);
     $uname = $_POST['courriel'];
@@ -20,11 +22,8 @@ if(isset($_POST['courriel'])) {
                 $_SESSION['contd'] = "oui";
                 $_SESSION['nomC'] = $row['fname'] . " " .  $row['lname'];
 
-                function alert($msg) {
-                    echo "<script type='text/javascript'>alert('$msg');</script>";
-                }
-                alert($row['fname'] . " " .  $row['lname']);
-                //header("Location: catalogue.php");
+                var_dump($_SESSION['nomC']);
+                header("Location: catalogue.php");
             }
             else {
                 function alert($msg) {

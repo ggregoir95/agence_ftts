@@ -1,6 +1,11 @@
 <?php
-session_start();
-$_SESSION['tableReservations'] = array();
+if ( session_status() === PHP_SESSION_NONE ) {
+    session_start();
+    if(!isset($_SESSION['tableReservations'])) {
+        $_SESSION['tableReservations'] = array();
+    }
+
+}
 
 function test_input($data)
 {

@@ -24,6 +24,7 @@ if(isset($_POST['firstName'])){
 
     $stmt->execute();
 
+    $_SESSION['nomC'] = $firstname . " " . $lastname;
     $_SESSION['contd'] = 'oui';
     header('Location: catalogue.php');
 }
