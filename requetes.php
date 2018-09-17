@@ -11,6 +11,10 @@ $username = "ggregoir";
 $password = "abc123";
 $dbname = "ggregoir_dbftts";
 
+//uname pour local: root
+//password pour local: abc123...
+//dbname pour local: db_ftts
+
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
