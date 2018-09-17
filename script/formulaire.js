@@ -14,7 +14,7 @@ var startDate;
 var prixTotal;
 if(offre_correspondant) {
   $('#nom-forfait').html(offre_correspondant.nom);
-  $('#nomForf').setAttribute('value', offre_correspondant.nom);
+  $('#nomForf').attr('value', offre_correspondant.nom);
   $('#debut-saison').html(offre_correspondant.debut_saison);
   $('#fin-saison').html(offre_correspondant.fin_saison);
 }
@@ -91,7 +91,7 @@ check['phone'] = function() {
 
     var phone = document.getElementById('phone'),
         tooltipStyle = getTooltip(phone).style,
-        phoneReg = /(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{2})\-[0-9]{2}/,
+        phoneReg = /(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/,
         isPhoneCorrect = phoneReg.test(phone.value);
 
     if (phone.value && isPhoneCorrect) {

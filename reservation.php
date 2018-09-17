@@ -66,7 +66,7 @@ if(isset($_POST['reserver'])) {
                     <span class="tooltip">Ce n'est pas une adresse mail valide</span> <br/>
                     <br/>
                     <label class="form_col" for="phone">Numéro de téléphone :</label>
-                    <input name="phone" id="phone" type="text" placeholder="(xxx) xxx-xx-xx"/>
+                    <input name="phone" id="phone" type="text" placeholder="(xxx) xxx-xxxx"/>
                     <span class="tooltip">Le numéro de téléphone est invalide</span> <br/>
                     <br/>
                     <label class="form_col" for="address">Adresse :</label>
