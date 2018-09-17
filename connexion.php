@@ -1,5 +1,10 @@
 <?php
-
+if ( session_status() === PHP_SESSION_NONE ) {
+    session_start();
+    if(!isset($_SESSION['tableReservations'])) {
+        $_SESSION['tableReservations'] = array();
+    }
+}
 /**
  * Created by PhpStorm.
  * User: ggregoir
